@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
 
         <report
             id="report_l10n_es_aeat_mod347"
@@ -12,5 +11,4 @@
             menu="True"
             header="False"/>
 
-    </data>
-</openerp>
+</odoo>

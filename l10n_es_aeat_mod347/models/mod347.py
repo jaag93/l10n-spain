@@ -154,7 +154,7 @@ class L10nEsAeatMod347Report(models.Model):
             partners = report._invoices_search(partners)
             # Read cash movements
             partners = report._cash_moves_search(partners)
-            for k, v in partners.iteritems():
+            for k, v in partners.items():
                 report._partner_records_create(v)
             report.partner_record_ids.calculate_quarter_totals()
             report.partner_record_ids.calculate_quarter_cash_totals()
@@ -414,18 +414,18 @@ class L10nEsAeatMod347PartnerRecord(models.Model):
     )
     operation_key = fields.Selection(
         selection=[
-            ('A', u'A - Adquisiciones de bienes y servicios superiores al '
-                  u'límite (1)'),
+            ('A', 'A - Adquisiciones de bienes y servicios superiores al '
+                  'límite (1)'),
             ('B',
-             u'B - Entregas de bienes y servicios superiores al límite (1)'),
+             'B - Entregas de bienes y servicios superiores al límite (1)'),
             ('C',
-             u'C - Cobros por cuenta de terceros superiores al límite (3)'),
-            ('D', u'D - Adquisiciones efectuadas por Entidades Públicas '
-                  u'(...) superiores al límite (1)'),
-            ('E', u'E - Subvenciones, auxilios y ayudas satisfechas por Ad. '
-                  u'Públicas superiores al límite (1)'),
-            ('F', u'F - Ventas agencia viaje'),
-            ('G', u'G - Compras agencia viaje'),
+             'C - Cobros por cuenta de terceros superiores al límite (3)'),
+            ('D', 'D - Adquisiciones efectuadas por Entidades Públicas '
+                  '(...) superiores al límite (1)'),
+            ('E', 'E - Subvenciones, auxilios y ayudas satisfechas por Ad. '
+                  'Públicas superiores al límite (1)'),
+            ('F', 'F - Ventas agencia viaje'),
+            ('G', 'G - Compras agencia viaje'),
         ],
         string='Operation Key',
     )

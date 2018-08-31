@@ -33,7 +33,7 @@
         "views/account_invoice_view.xml",
         "views/res_partner_view.xml",
         "views/mod347_view.xml",
-        "report/mod347_report.xml",
+        #"report/mod347_report.xml",
     ],
     'installable': True,
     'images': [
